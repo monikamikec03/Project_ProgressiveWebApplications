@@ -4073,7 +4073,7 @@ input[type="button"].btn-block {
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
-  font-size: 1.35rem;
+  font-size: 1.30rem;
 }
 
 .nav-link.disabled {
@@ -4646,8 +4646,8 @@ input[type="button"].btn-block {
 }
 
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: 0.625rem;
+  margin-left: 0.625rem;
 }
 
 .card-img-overlay {
@@ -4662,6 +4662,7 @@ input[type="button"].btn-block {
 .card-img {
   width: 100%;
   border-radius: calc(0.25rem - 1px);
+
 }
 
 .card-img-top {
