@@ -153,14 +153,14 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: white;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  color: white;
+  text-decoration: darkgray;
 }
 
 a:not([href]):not([tabindex]) {
@@ -415,6 +415,11 @@ h6, .h6 {
 
 .display-4 {
   font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.display-5{
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -4063,10 +4068,12 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  font-size:1.20rem;
 }
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
+  font-size: 1.35rem;
 }
 
 .nav-link.disabled {
@@ -4181,6 +4188,7 @@ input[type="button"].btn-block {
 
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
+  font-size: 1.30rem;
 }
 
 .navbar-nav {
