@@ -35,5 +35,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-image: url("assets/img/background.jpg") ;
+  background-position: center;
+  background-size: cover;
 }
 </style>

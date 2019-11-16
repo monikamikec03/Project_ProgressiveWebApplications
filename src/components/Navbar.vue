@@ -3,7 +3,7 @@
     <div class="container">
     <img class="card-header-pills" src="../assets/logo.png" style="width:4%"/>
       <a class="navbar-brand"><router-link to="/">DVD Haganj</router-link></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
+      <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >
         <span class="navbar-toggler-icon" v-onclick="toggleNav"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -26,8 +26,16 @@
   </nav>
 </template>
 
+
+
 <script>
 export default {
 
 }
 </script>
+
+<style>
+.navbar{
+  
+}
+</style>
