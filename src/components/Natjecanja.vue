@@ -5,11 +5,11 @@
     </header>
 
     <div class="row text-center">
-      <div class="col-lg-3 col-md-6 mb-4" v-for="(obj, key) in novostiJSON" :key="key">
+      <div class="col-lg-3 col-md-6 mb-4 text-dark" v-for="(obj, key) in novostiJSON" :key="key">
         <div class="card h-100">
-          <img class="card-img-top" src="" alt=""/>
+          <img class="card-img-top" :src="obj.img">
           <div class="card-body">
-            <h4>{{ obj.caption }}</h4>
+            <h4>{{ obj.title }}</h4>
             <p class="card-text">{{ obj.paragraph }}</p>
           </div>
           <div class="card-footer">
@@ -26,9 +26,15 @@ export default{
     data: () => ({
         novostiJSON: [
             {
-                img: 'ZA_Hrebinec.jpg',
-                title: 'Nanovo dodani članak', 
-                paragraph: 'Ovo sam sama naknadno unijela',
+                img: '../assets/img/background.jpeg',
+                title: 'Error', 
+                paragraph: 'Ne uzima sliku iz foldera. Pogledati putanju jer mislim da ona nije dobra',
+                readMore: 'Pročitaj opis!' 
+            },
+                        {
+                img: 'https://www.dnevno.hr/wp-content/uploads/2019/01/PXL_021018_22191831vatrogasci-660x450.jpg',
+                title: 'Slika s interneta', 
+                paragraph: 'Pronašla sam sliku na internetu i kopirala njen url da vidim kako to učitava... Radi!',
                 readMore: 'Pročitaj više!' 
             }
         ]

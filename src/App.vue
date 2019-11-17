@@ -1,15 +1,8 @@
 <template>
   <div id="app">
-  <Navbar/>
-  <router-view/>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">DVD Haganj &copy; VZO Gradec</p>
-    </div>
-  </footer>
-
+    <Navbar/>
+    <router-view/>
+    <Footer/>
   </div>
 </template>
 
@@ -17,12 +10,14 @@
 
 
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 
 export default {
   name: 'app',
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 }
 </script>
@@ -33,10 +28,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-top: 60px;
   background-image: url("assets/img/background.jpg") ;
   background-position: center;
   background-size: cover;
+
 }
 </style>

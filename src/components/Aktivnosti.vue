@@ -7,7 +7,8 @@
 
     <!-- Page Features -->
     <div class="row text-center">
-      <div class="col-lg-3 col-md-6 mb-4" v-for="(obj, key) in novostiJSON" :key="key">
+      <div class="col-lg-3 col-md-6 mb-4 text-dark {
+" v-for="(obj, key) in novostiJSON" :key="key">
         <div class="card h-100">
           <img class="card-img-top" src="http://placehold.it/500x325" alt="">
           <div class="card-body">
@@ -52,12 +53,6 @@ export default{
                 img: '/something/random/img.jpg',
                 title: 'Dva nova vatrogasca s posebnim ovlastima', 
                 paragraph: 'Neki tekst',
-                readMore: 'Pročitaj više!' 
-            },
-            {
-                img: '/something/random/img.jpg',
-                title: 'Nanovo dodani članak', 
-                paragraph: 'Ovo sam sama naknadno unijela',
                 readMore: 'Pročitaj više!' 
             }
         ]
