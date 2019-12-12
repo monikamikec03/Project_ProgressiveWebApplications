@@ -23,6 +23,9 @@
         </ul>
       </div>
     </div>
+<div class="navbar-menu" id="navMenu">
+  <!-- navbar-start, navbar-end... -->
+</div>
   </nav>
 </template>
 
