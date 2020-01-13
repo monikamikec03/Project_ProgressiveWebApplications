@@ -26,7 +26,7 @@ export default{
     data: () => ({
         novostiJSON: [
             {
-                img: '../assets/img/background.jpeg',
+                img: './assets/img/background.jpg',
                 title: 'Error', 
                 paragraph: 'Ne uzima sliku iz foldera. Pogledati putanju jer mislim da ona nije dobra',
                 readMore: 'Pročitaj opis!' 

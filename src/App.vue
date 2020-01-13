@@ -1,7 +1,11 @@
 <template>
   <div id="app">
+    <div id = "nav">
+        <router-link v-if="authenticated" to="/Login" v-on:click.native="logout()" replace>Logout</router-link>
+    </div>
+    <router-view @authenticated="setAuthenticated" />
     <Navbar/>
-    <router-view/>
+   <!-- <router-view/>-->
     <Footer/>
   </div>
 </template>
@@ -15,6 +19,30 @@ import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
+
+  data() {
+            return {
+                authenticated: false,
+                mockAccount: {
+                    username: "nraboy",
+                    password: "password"
+                }
+            }
+        },
+        mounted() {
+            if(!this.authenticated) {
+                this.$router.replace({ name: "login" });
+            }
+        },
+        methods: {
+            setAuthenticated(status) {
+                this.authenticated = status;
+            },
+            logout() {
+                this.authenticated = false;
+            }
+        },
+
   components: {
     Navbar,
     Footer
@@ -28,9 +56,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ffffff;
+  color: black;
   margin-top: 60px;
-  background-image: url("assets/img/background.jpg") ;
+  //background-image: url("assets/img/background.jpg") ;
   background-size: 100%;
 
 }

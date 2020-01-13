@@ -6,6 +6,7 @@ import Aktivnosti from '@/components/Aktivnosti'
 import Natjecanja from '@/components/Natjecanja'
 import Kontakt from '@/components/Kontakt'
 import Login from '@/components/Login'
+import SecureComponent from "@/components/secure.vue"
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
             path: '/login',
             name: 'Login',
             component: Login
+        },
+        {
+            path: '/secure',
+            name:'secure',
+            component:SecureComponent
         }
     ]
 })

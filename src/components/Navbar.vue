@@ -1,3 +1,9 @@
+<style scoped>
+.hide{
+  visibility: hidden;
+}
+</style>
+
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -19,7 +25,7 @@
       <div :class="{ 'show': showNav }" class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link" id = "c1">
               <router-link to="aktivnosti">Aktivnosti</router-link>
             </a>
           </li>
@@ -36,6 +42,11 @@
           <li class="nav-item">
             <a class="nav-link">
               <router-link to="login">Login</router-link>
+            </a>
+          </li>
+          <li class="nav-item hide">
+            <a class="nav-link">
+              <router-link to="secure">Članovi</router-link>
             </a>
           </li>
         </ul>
@@ -58,5 +69,7 @@ export default {
       this.showNav = !this.showNav;
     }
   }
+
 };
+
 </script>
