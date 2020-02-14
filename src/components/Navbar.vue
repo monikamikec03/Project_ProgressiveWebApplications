@@ -1,12 +1,3 @@
-<style scoped>
-.hide{
-  visibility: hidden;
-}
-.show{
-  visibility: visible;
-}
-</style>
-
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -28,7 +19,7 @@
       <div :class="{ 'show': showNav }" class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" id = "c1">
+            <a class="nav-link" id="c1">
               <router-link to="aktivnosti">Aktivnosti</router-link>
             </a>
           </li>
@@ -42,12 +33,12 @@
               <router-link to="kontakt">Kontakt</router-link>
             </a>
           </li>
-          <li class="nav-item" id = "login">
+          <li v-if="!authenticated" class="nav-item" id="login">
             <a class="nav-link">
               <router-link to="login">Login</router-link>
             </a>
           </li>
-          <li class="nav-item hide" id = "clanovi">
+          <li v-else class="nav-item hide" id="clanovi">
             <a class="nav-link">
               <router-link to="secure">Članovi</router-link>
             </a>
@@ -58,44 +49,33 @@
   </nav>
 </template>
 
-
-
 <script>
-
-
 export default {
+  props: ["authenticated"],
   data() {
     return {
       showNav: false
-    }
-  },
-
-  mounted(){
-    if(!this.authenticated){
-      this.$router.replace({name:"login"});
-    }
+    };
   },
   methods: {
     toggleNav() {
       this.showNav = !this.showNav;
     }
   }
-
 };
-
 </script>
 
 <style scoped>
-.black{
-  color:black;
+.black {
+  color: black;
   font-size: 20pt;
-  padding-top:20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.black:hover{
-  color:orange;
+.black:hover {
+  color: orange;
 }
-.green{
-  color:green;
+.green {
+  color: green;
 }
 </style>
