@@ -2,6 +2,9 @@
 .hide{
   visibility: hidden;
 }
+.show{
+  visibility: visible;
+}
 </style>
 
 <template>
@@ -39,12 +42,12 @@
               <router-link to="kontakt">Kontakt</router-link>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" id = "login">
             <a class="nav-link">
               <router-link to="login">Login</router-link>
             </a>
           </li>
-          <li class="nav-item hide">
+          <li class="nav-item hide" id = "clanovi">
             <a class="nav-link">
               <router-link to="secure">Članovi</router-link>
             </a>
@@ -58,11 +61,19 @@
 
 
 <script>
+
+
 export default {
   data() {
     return {
       showNav: false
-    };
+    }
+  },
+
+  mounted(){
+    if(!this.authenticated){
+      this.$router.replace({name:"login"});
+    }
   },
   methods: {
     toggleNav() {
@@ -73,3 +84,18 @@ export default {
 };
 
 </script>
+
+<style scoped>
+.black{
+  color:black;
+  font-size: 20pt;
+  padding-top:20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.black:hover{
+  color:orange;
+}
+.green{
+  color:green;
+}
+</style>

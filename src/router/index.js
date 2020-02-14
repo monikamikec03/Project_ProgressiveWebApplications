@@ -7,6 +7,7 @@ import Natjecanja from '@/components/Natjecanja'
 import Kontakt from '@/components/Kontakt'
 import Login from '@/components/Login'
 import SecureComponent from "@/components/secure.vue"
+import Message from "@/components/Message.vue"
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
             path: '/secure',
             name:'secure',
             component:SecureComponent
+        },
+        {
+            path: 'message',
+            name: 'message',
+            component:Message
         }
     ]
 })

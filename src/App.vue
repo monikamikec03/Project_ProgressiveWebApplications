@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div id = "nav">
-        <router-link v-if="authenticated" to="/Login" v-on:click.native="logout()" replace>Logout</router-link>
+        <router-link v-if="authenticated" to="/Login" v-on:click.native="logout()" replace  :class = "[authenticated ? 'black' : 'green']">ODJAVI ME</router-link>
     </div>
     <router-view @authenticated="setAuthenticated" />
     <Navbar/>
    <!-- <router-view/>-->
-    <Footer/>
+    <!--<Footer/>-->
   </div>
 </template>
 
@@ -14,7 +14,7 @@
 
 
 import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+//import Footer from './components/Footer.vue'
 
 
 export default {
@@ -27,6 +27,7 @@ export default {
                     username: "nraboy",
                     password: "password"
                 }
+                
             }
         },
         mounted() {
@@ -45,7 +46,7 @@ export default {
 
   components: {
     Navbar,
-    Footer
+    //Footer
   }
 }
 </script>
@@ -61,5 +62,22 @@ export default {
   //background-image: url("assets/img/background.jpg") ;
   background-size: 100%;
 
+}
+.black{
+  color:black;
+  font-size: 20pt;
+  padding-top:20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.black:hover{
+  color:orange;
+}
+.green{
+  color:green;
+}
+#nav{
+  padding-top:50px;
+  width:20%;
+  margin: 0 auto;
 }
 </style>
