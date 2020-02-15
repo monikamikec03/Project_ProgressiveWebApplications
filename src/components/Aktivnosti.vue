@@ -1,6 +1,6 @@
 <style scoped>
 #more{
-  display:none;
+  display: none;
 }
 </style>
 
@@ -72,7 +72,7 @@ export default{
         ]
     }),
     methods:{
-      show:function readMore(){
+      show: function readMore(){
         var dots = document.getElementById("dots");
         var moreText = document.getElementById("more");
         var btnText = document.getElementById("myBtn");
