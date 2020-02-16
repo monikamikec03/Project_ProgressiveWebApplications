@@ -26,7 +26,7 @@ export default{
     data: () => ({
         novostiJSON: [
             {
-                img: './assets/img/background.jpg',
+                img: 'https://scontent.fzag2-1.fna.fbcdn.net/v/t1.0-9/70284072_925074894516359_1125879943834632192_n.jpg?_nc_cat=103&_nc_oc=AQkcZkfgZqDIX41Xdr9lHa1ZnRoE2lfB4nURILJt-7UkVzYnvOQAKjMU86-BccUSLMM&_nc_ht=scontent.fzag2-1.fna&oh=d177642e5922b75c1403b577b5bcd463&oe=5ECB4AA1',
                 title: 'Error', 
                 paragraph: 'Ne uzima sliku iz foldera. Pogledati putanju jer mislim da ona nije dobra',
                 readMore: 'Pročitaj opis!' 

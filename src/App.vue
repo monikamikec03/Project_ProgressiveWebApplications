@@ -27,8 +27,8 @@ export default {
     return {
       authenticated: false,
       mockAccount: {
-        username: "nraboy",
-        password: "password"
+        username: "monci",
+        password: "123"
       }
     };
   },
@@ -62,6 +62,7 @@ export default {
   color: black;
   margin-top: 60px;
   background-size: 100%;
+  
 }
 .black {
   color: black;

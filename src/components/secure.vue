@@ -4,57 +4,105 @@
         <p>
             Ovdje su sve obavijesti za članove
         </p>
+        <div id = "add-blog">
+            <h2>Dodaj novu obavijest</h2>
+            <form>
+                <label>Naslov</label>
+                <input type="text" v-model="blog.title" required/>
+                <label>Sadržaj</label>
+                <textarea v-model="blog.content"></textarea>
+            </form>
+            <div id = "preview">
+                <h3>Prikaz</h3>
+                <p>Naslov: {{ blog.title }}</p>
+                <p>Sadržaj: {{ blog.content }}</p>
+            </div>
+        </div>
 
-        <div id = "clanovi">
+        <div id = "Skills">
             <h4>Popis članova</h4>
-            <input v-model="noviClan">
-            <button v-on:click="dodajClana">
-                + DODAJ
-            </button>
+            <form @submit.prevent="addSkill">
+            <input type="text" v-model="skill"  style="width:500px; margin:0 auto">
+            </form>
+
             <ul>
-                <li v-for="item in items" :key="item">{{ item }}</li>
+                <li v-for="(data, index) in skills" :key="index">{{ data.skill }}</li>
             </ul>
         </div>
+
+
     </div>
 </template>
 
-<script src="https://unpkg.com/vue"></script>
 <script>
+
 export default{
-    name: 'clanovi',
+
+    name: 'Skills',
     data(){
         return{
-            items:[
-                'Ivan Dončević',
-                'Vesna Slunjski',
-                'Mihaela Dončević',
-                'Martina Moguš',
-                'Monika Mikec',
-                'Zlatko Slunjski',
-                'Maristela Baričević',
-                'Vesna Puhača',
-                'Valentina Puhača',
-                'Mihael Dončević'
+            skill:'',
+            skills:[
+                {
+                    "skill":"Ivan Dončević"
+                },
+                {
+                    "skill":"Mihaela Dončević"
+                },
+                {
+                    "skill":"Mihael Dončević"
+                },
+                {
+                    "skill":"Monika Mikec"
+                },
+                {
+                    "skill":"Martina Moguš"
+                },
+                {
+                    "skill":"Ivan Dončević"
+                },
+                {
+                    "skill":"Mihaela Dončević"
+                },
+                {
+                    "skill":"Mihael Dončević"
+                },
+                {
+                    "skill":"Monika Mikec"
+                },
+                {
+                    "skill":"Martina Moguš"
+                },
+                {
+                    "skill":"Ivan Dončević"
+                },
+                {
+                    "skill":"Mihaela Dončević"
+                },
+                {
+                    "skill":"Mihael Dončević"
+                },
+                {
+                    "skill":"Monika Mikec"
+                },
+                {
+                    "skill":"Martina Moguš"
+                },
             ],
-            noviClan: '',
-
-
-            
-            methods:{
-                dodajClana: function(){
-                    return clanovi.push(noviClan)
-                }
-
-
+            blog:{
+                title: "",
+                content: ""
             }
-            
         }
-
-
-
-
-        
+  
+    },
+    methods:{
+        addSkill(){
+            this.skills.push({skill: this.skill})
+            this.skill = '';
+        }
     }
+        
 }
 
 </script>
@@ -92,5 +140,36 @@ export default{
     }
     li{
         opacity: 0.5;
+        padding-bottom:5px;
+    }
+
+    #add-blog *{
+        box-sizing: border-box;
+    }
+    #add-blog{
+        margin:20px auto;
+        max-width:500px;
+    }
+    label{
+        display:block;
+        margin:20px 0 10px;
+    }
+    input[type="text"], textarea{
+        display:block;
+        width:100%;
+        padding:8px;
+    }
+    #preview{
+        padding:10px 20px;
+        border:1px dotted #ccc;
+        margin:30px 0;
+    }
+    h3{
+        margin-top:20px;
+    }
+    h2{
+        margin-top:100px;
     }
 </style>
+
+
